@@ -1,6 +1,9 @@
 package de.hadiuz.versuch4;
 
 import com.mojang.logging.LogUtils;
+import de.hadiuz.versuch4.item.ModCreativModeTabs;
+import de.hadiuz.versuch4.item.ModItems;
+import net.minecraft.world.item.CreativeModeTabs;
 import net.minecraftforge.api.distmarker.Dist;
 import net.minecraftforge.common.MinecraftForge;
 import net.minecraftforge.event.BuildCreativeModeTabContentsEvent;
@@ -19,26 +22,21 @@ import org.slf4j.Logger;
 @Mod(Versuch4.MOD_ID)
 public class Versuch4 {
 
-    // Define mod id in a common place for everything to reference
     public static final String MOD_ID = "versuch4";
-    // Directly reference a slf4j logger
+
     private static final Logger LOGGER = LogUtils.getLogger();
 
     public Versuch4() {
         IEventBus modEventBus = FMLJavaModLoadingContext.get().getModEventBus();
 
-        // Register the commonSetup method for modloading
+        ModItems.register(modEventBus);
+        ModCreativModeTabs.register(modEventBus);
+
+
+
         modEventBus.addListener(this::commonSetup);
-
-
-
-        // Register ourselves for server and other game events we are interested in
         MinecraftForge.EVENT_BUS.register(this);
-
-        // Register the item to a creative tab
         modEventBus.addListener(this::addCreative);
-
-        // Register our mod's ForgeConfigSpec so that Forge can create and load the config file for us
         ModLoadingContext.get().registerConfig(ModConfig.Type.COMMON, Config.SPEC);
     }
 
@@ -48,6 +46,9 @@ public class Versuch4 {
 
     private void addCreative(BuildCreativeModeTabContentsEvent event)
     {
+        if(event.getTabKey() == CreativeModeTabs.INGREDIENTS){
+            event.accept(ModItems.SAPPHIRE);
+        }
     }
 
     @SubscribeEvent
