@@ -1,6 +1,10 @@
 package de.hadiuz.versuch4;
 
 import com.mojang.logging.LogUtils;
+import de.hadiuz.versuch4.block.ModBlocks;
+import de.hadiuz.versuch4.block.entity.ModBlockEntities;
+import de.hadiuz.versuch4.fluid.ModFluidTypes;
+import de.hadiuz.versuch4.fluid.ModFluids;
 import de.hadiuz.versuch4.item.ModCreativModeTabs;
 import de.hadiuz.versuch4.item.ModItems;
 import net.minecraft.world.item.CreativeModeTabs;
@@ -31,8 +35,10 @@ public class Versuch4 {
 
         ModItems.register(modEventBus);
         ModCreativModeTabs.register(modEventBus);
-
-
+        ModBlocks.register(modEventBus);
+        ModFluids.register(modEventBus);
+        ModFluidTypes.register(modEventBus);
+        ModBlockEntities.register(modEventBus);
 
         modEventBus.addListener(this::commonSetup);
         MinecraftForge.EVENT_BUS.register(this);

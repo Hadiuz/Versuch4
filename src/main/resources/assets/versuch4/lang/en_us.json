@@ -2,5 +2,15 @@
   "creativetab.versuch_tab": "Versuch 4",
 
   "item.versuch4.sapphire": "Sapphire",
-  "item.versuch4.raw_sapphire": "Raw Sapphire"
+  "item.versuch4.raw_sapphire": "Raw Sapphire",
+  "item.versuch4.metal_detector": "Ore Detector",
+
+  "block.versuch4.sapphire_block": "Sapphire Block",
+  "block.versuch4.raw_sapphire_block": "Raw Sapphire Block",
+  "block.versuch4.sapphire_ore": "Sapphire Ore",
+  "block.versuch4.deepslate_sapphire_ore": "Sapphire Ore",
+  "block.versuch4.nether_sapphire_ore": "Sapphire Ore",
+  "block.versuch4.end_stone_sapphire_ore": "Sapphire Ore",
+  "block.versuch4.deep_scanner": "Deep Scanner",
+  "block.versuch4.test_block": "Test Block"
 }

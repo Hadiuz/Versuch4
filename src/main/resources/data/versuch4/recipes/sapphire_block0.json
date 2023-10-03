@@ -1,0 +1,9 @@
+{
+  "type": "minecraft:blasting",
+  "ingredient": {
+    "item": "versuch4:raw_sapphire_block"
+  },
+  "result": "versuch4:sapphire_block",
+  "experience": 0.1,
+  "cookingtime": 100
+}

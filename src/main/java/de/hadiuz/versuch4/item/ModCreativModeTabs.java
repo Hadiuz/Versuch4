@@ -1,6 +1,7 @@
 package de.hadiuz.versuch4.item;
 
 import de.hadiuz.versuch4.Versuch4;
+import de.hadiuz.versuch4.block.ModBlocks;
 import net.minecraft.core.registries.Registries;
 import net.minecraft.network.chat.Component;
 import net.minecraft.world.item.CreativeModeTab;
@@ -20,10 +21,17 @@ public class ModCreativModeTabs {
                     .displayItems((pParameters, pOutput) -> {
                         pOutput.accept(ModItems.SAPPHIRE.get());
                         pOutput.accept(ModItems.RAW_SAPPHIRE.get());
-
-                        pOutput.accept(Items.DIAMOND);
-
-
+                        pOutput.accept(ModBlocks.SAPPHIRE_BLOCK.get());
+                        pOutput.accept(ModBlocks.RAW_SAPPHIRE_BLOCK.get());
+                        pOutput.accept(ModBlocks.SAPPHIRE_ORE.get());
+                        pOutput.accept(ModBlocks.DEEPSLATE_SAPPHIRE_ORE.get());
+                        pOutput.accept(ModBlocks.NETHER_SAPPHIRE_ORE.get());
+                        pOutput.accept(ModBlocks.END_STONE_SAPPHIRE_ORE.get());
+                        pOutput.accept(ModItems.METAL_DETECTOR.get());
+                        pOutput.accept(ModBlocks.DEEP_SCANNER.get());
+                        pOutput.accept(ModBlocks.TEST_BLOCK.get());
+                        pOutput.accept(ModBlocks.FAKEDRON.get());
+                        pOutput.accept(ModItems.SOAP_WATER_BUCKET.get());
                     })
                     .build());
 

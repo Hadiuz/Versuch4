@@ -1,0 +1,17 @@
+{
+  "type": "minecraft:crafting_shaped",
+  "pattern": [
+    "iii",
+    "iii",
+    "iii"
+  ],
+  "key": {
+    "i": {
+      "item": "versuch4:raw_sapphire"
+    }
+  },
+  "result": {
+    "item": "versuch4:raw_sapphire_block",
+    "count": 1
+  }
+}
